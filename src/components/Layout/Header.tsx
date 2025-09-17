@@ -1,7 +1,11 @@
 import { Button } from "@/components/ui/button"
-import { Search, Bell, Settings } from "lucide-react"
+import { Search, Bell, Settings, Globe } from "lucide-react"
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '@/hooks/useLanguage';
 
 export const Header = () => {
+  const { t } = useTranslation();
+  const { toggleLanguage } = useLanguage();
   return (
     <header className="bg-white border-b border-border shadow-sm">
       <div className="container mx-auto px-6 py-4">
@@ -21,21 +25,27 @@ export const Header = () => {
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#" className="text-foreground hover:text-orange transition-colors">الرئيسية</a>
-            <a href="#" className="text-muted-foreground hover:text-orange transition-colors">من نحن</a>
-            <a href="#" className="text-muted-foreground hover:text-orange transition-colors">مشاريعنا</a>
-            <a href="#" className="text-muted-foreground hover:text-orange transition-colors">خدماتنا</a>
-            <a href="#" className="text-muted-foreground hover:text-orange transition-colors">اتصل بنا</a>
+            <a href="#" className="text-foreground hover:text-orange transition-colors">{t('common.home')}</a>
+            <a href="#" className="text-muted-foreground hover:text-orange transition-colors">{t('common.about')}</a>
+            <a href="#" className="text-muted-foreground hover:text-orange transition-colors">{t('common.projects')}</a>
+            <a href="#" className="text-muted-foreground hover:text-orange transition-colors">{t('common.services')}</a>
+            <a href="#" className="text-muted-foreground hover:text-orange transition-colors">{t('common.contact')}</a>
           </nav>
 
           {/* Right Side Actions */}
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2 text-sm">
               <span className="bg-primary text-primary-foreground px-2 py-1 rounded text-xs">v2.1.0</span>
-              <span className="text-muted-foreground">الدعم على مدار الساعة</span>
+              <span className="text-muted-foreground">{t('common.support')}</span>
             </div>
-            <Button variant="outline" size="sm" className="gap-2">
-              <span>العربية</span>
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="gap-2 hover:bg-orange/10 hover:border-orange"
+              onClick={toggleLanguage}
+            >
+              <Globe className="w-4 h-4" />
+              <span>{t('common.language')}</span>
             </Button>
           </div>
         </div>

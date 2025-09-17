@@ -1,0 +1,62 @@
+{
+  "common": {
+    "search": "Search",
+    "language": "English",
+    "home": "Home",
+    "about": "About Us",
+    "projects": "Our Projects",
+    "services": "Our Services",
+    "contact": "Contact Us",
+    "support": "24/7 Support",
+    "all": "All",
+    "apps": "apps",
+    "category": "categories",
+    "favorite": "favorites",
+    "available": "available",
+    "launch": "Launch"
+  },
+  "appsHub": {
+    "title": "Everything you need to manage your business is here, ",
+    "titleHighlight": "with just one click",
+    "searchPlaceholder": "Search for apps and tools...",
+    "categories": {
+      "all": "All",
+      "projectManagement": "Project Management",
+      "accounting": "Accounting & Finance",
+      "hr": "Human Resources",
+      "salesMarketing": "Sales & Marketing",
+      "warehouse": "Warehouse",
+      "maintenance": "Maintenance",
+      "reports": "Reports",
+      "security": "Security"
+    }
+  },
+  "footer": {
+    "companyInfo": {
+      "title": "Al-Azab Construction",
+      "description": "Leading in construction and real estate development, providing integrated ERP solutions for efficient and high-quality project management."
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "dashboard": "Dashboard",
+      "projects": "Projects",
+      "reports": "Reports",
+      "settings": "Settings"
+    },
+    "support": {
+      "title": "Support & Help",
+      "help": "Help Center",
+      "documentation": "Documentation",
+      "contact": "Contact Us",
+      "training": "Training"
+    },
+    "contact": {
+      "title": "Contact Information",
+      "phone": "+966 11 123 4567",
+      "email": "info@al-azab.co",
+      "address": "Riyadh, Saudi Arabia"
+    },
+    "rights": "© 2024 Al-Azab Construction. All rights reserved.",
+    "poweredBy": "Powered by"
+  }
+}

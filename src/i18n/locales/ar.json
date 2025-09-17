@@ -1,0 +1,62 @@
+{
+  "common": {
+    "search": "بحث",
+    "language": "العربية",
+    "home": "الرئيسية",
+    "about": "من نحن",
+    "projects": "مشاريعنا",
+    "services": "خدماتنا",
+    "contact": "اتصل بنا",
+    "support": "الدعم على مدار الساعة",
+    "all": "الكل",
+    "apps": "تطبيق",
+    "category": "فئة",
+    "favorite": "مفضل",
+    "available": "متاح",
+    "launch": "تشغيل"
+  },
+  "appsHub": {
+    "title": "كل ما تحتاج إدارة عملك موجود هنا، ",
+    "titleHighlight": "بنقرة واحدة فقط",
+    "searchPlaceholder": "ابحث عن التطبيقات والأدوات...",
+    "categories": {
+      "all": "الكل",
+      "projectManagement": "إدارة المشاريع",
+      "accounting": "المحاسبة والمالية",
+      "hr": "الموارد البشرية",
+      "salesMarketing": "المبيعات والتسويق",
+      "warehouse": "المخازن",
+      "maintenance": "الصيانة",
+      "reports": "التقارير",
+      "security": "الأمان"
+    }
+  },
+  "footer": {
+    "companyInfo": {
+      "title": "الأذابة للإنشاءات",
+      "description": "الرائدة في مجال الإنشاءات والتطوير العقاري، نقدم حلول ERP متكاملة لإدارة المشاريع بكفاءة وجودة عالية."
+    },
+    "quickLinks": {
+      "title": "روابط سريعة",
+      "dashboard": "لوحة التحكم",
+      "projects": "المشاريع",
+      "reports": "التقارير",
+      "settings": "الإعدادات"
+    },
+    "support": {
+      "title": "الدعم والمساعدة",
+      "help": "مركز المساعدة",
+      "documentation": "الوثائق",
+      "contact": "اتصل بنا",
+      "training": "التدريب"
+    },
+    "contact": {
+      "title": "معلومات التواصل",
+      "phone": "+966 11 123 4567",
+      "email": "info@al-azab.co",
+      "address": "الرياض، المملكة العربية السعودية"
+    },
+    "rights": "© 2024 الأذابة للإنشاءات. جميع الحقوق محفوظة.",
+    "poweredBy": "مدعوم بتقنية"
+  }
+}

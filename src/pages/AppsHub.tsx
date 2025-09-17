@@ -1,5 +1,7 @@
 import { useState } from "react"
 import { Header } from "@/components/Layout/Header"
+import { Footer } from "@/components/Layout/Footer"
+import { useTranslation } from 'react-i18next'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -25,14 +27,22 @@ const Banknote = DollarSign
 const FileBarChart = BarChart
 
 const AppsHub = () => {
+  const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState("")
-  const [selectedCategory, setSelectedCategory] = useState("الكل")
+  const [selectedCategory, setSelectedCategory] = useState(t('appsHub.categories.all'))
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid")
   const [favoriteApps, setFavoriteApps] = useState<string[]>([])
 
   const appCategories = [
-    "الكل", "إدارة المشاريع", "المحاسبة والمالية", "الموارد البشرية", 
-    "المبيعات والتسويق", "المخازن", "الصيانة", "التقارير", "الأمان"
+    t('appsHub.categories.all'), 
+    t('appsHub.categories.projectManagement'), 
+    t('appsHub.categories.accounting'), 
+    t('appsHub.categories.hr'), 
+    t('appsHub.categories.salesMarketing'), 
+    t('appsHub.categories.warehouse'), 
+    t('appsHub.categories.maintenance'), 
+    t('appsHub.categories.reports'), 
+    t('appsHub.categories.security')
   ]
 
   const allApps = [
@@ -88,7 +98,7 @@ const AppsHub = () => {
   const filteredApps = allApps.filter(app => {
     const matchesSearch = app.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          app.description.toLowerCase().includes(searchQuery.toLowerCase())
-    const matchesCategory = selectedCategory === "الكل" || app.category === selectedCategory
+    const matchesCategory = selectedCategory === t('appsHub.categories.all') || app.category === selectedCategory
     return matchesSearch && matchesCategory
   })
 
@@ -109,7 +119,7 @@ const AppsHub = () => {
         {/* Page Header */}
         <div className="text-center mb-8">
           <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            كل ما تحتاج إدارة عملك موجود هنا، <span className="text-orange">بنقرة واحدة فقط</span>
+            {t('appsHub.title')}<span className="text-orange">{t('appsHub.titleHighlight')}</span>
           </h1>
         </div>
 
@@ -118,7 +128,7 @@ const AppsHub = () => {
           <div className="relative">
             <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5" />
             <Input 
-              placeholder="ابحث عن التطبيقات والأدوات..."
+              placeholder={t('appsHub.searchPlaceholder')}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="pr-12 pl-4 py-3 text-base rounded-xl border bg-background shadow-sm focus:shadow-md transition-all duration-300"
@@ -167,7 +177,7 @@ const AppsHub = () => {
               </Button>
             </div>
             <span className="text-sm text-muted-foreground">
-              {filteredApps.length} تطبيق
+              {filteredApps.length} {t('common.apps')}
             </span>
           </div>
         </div>
@@ -242,7 +252,7 @@ const AppsHub = () => {
                     
                     {/* Launch Button */}
                     <Button size="sm" variant="outline" className="w-full text-sm hover:bg-primary hover:text-primary-foreground transition-all duration-300">
-                      تشغيل
+                      {t('common.launch')}
                       <ArrowRight className="w-3 h-3 mr-2" />
                     </Button>
                   </div>
@@ -257,21 +267,23 @@ const AppsHub = () => {
           <div className="inline-flex items-center gap-8 px-6 py-3 bg-background rounded-full border shadow-sm">
             <div className="text-center">
               <div className="text-lg font-bold text-foreground">{allApps.length}</div>
-              <div className="text-xs text-muted-foreground">تطبيق متاح</div>
+              <div className="text-xs text-muted-foreground">{t('common.apps')} {t('common.available')}</div>
             </div>
             <div className="w-px h-8 bg-border"></div>
             <div className="text-center">
               <div className="text-lg font-bold text-foreground">{appCategories.length - 1}</div>
-              <div className="text-xs text-muted-foreground">فئة</div>
+              <div className="text-xs text-muted-foreground">{t('common.category')}</div>
             </div>
             <div className="w-px h-8 bg-border"></div>
             <div className="text-center">
               <div className="text-lg font-bold text-foreground">{favoriteApps.length}</div>
-              <div className="text-xs text-muted-foreground">مفضل</div>
+              <div className="text-xs text-muted-foreground">{t('common.favorite')}</div>
             </div>
           </div>
         </div>
       </div>
+      
+      <Footer />
     </div>
   )
 }
