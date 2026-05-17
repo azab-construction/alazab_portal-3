@@ -13,6 +13,12 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ["Inter", "IBM Plex Sans Arabic", "Cairo", "sans-serif"],
+        editorial: ["Inter", "IBM Plex Sans Arabic", "Cairo", "sans-serif"],
+        serif: ["'Playfair Display'", "serif"],
+        arabic: ["'IBM Plex Sans Arabic'", "Cairo", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
